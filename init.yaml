@@ -1,5 +1,10 @@
-version: 0.0.1
+version: 0.1.0
 folder_path: plugins/coursepilot_webui_plugin
 type: plugin
-requirements: []
+requirements:
+  - https://github.com/AI-Driven-Highspeed-Development/Logger-Util.git
+  - https://github.com/AI-Driven-Highspeed-Development/config_manager.git
+  - https://github.com/AI-Driven-Highspeed-Development/exceptions_core.git
+  - https://github.com/HKBU-CoursePilot/moodle_adapter_plugin.git
+  - https://github.com/HKBU-CoursePilot/llm_gateway_manager.git
 repo_url: https://github.com/HKBU-CoursePilot/coursepilot_webui_plugin.git

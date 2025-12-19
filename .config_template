@@ -2,5 +2,22 @@
     "module_name": "coursepilot_webui_plugin",
     "path": {
         "data": "./project/data/coursepilot_webui_plugin"
+    },
+    "api": {
+        "host": "127.0.0.1",
+        "port": 8000,
+        "cors_origins": [
+            "http://localhost:5173",
+            "http://localhost:4173"
+        ]
+    },
+    "frontend": {
+        "mode": "dev",
+        "dev_port": 5173,
+        "build_dir": "frontend/build"
+    },
+    "websocket": {
+        "ping_interval": 30,
+        "max_message_size": 1048576
     }
 }

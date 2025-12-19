@@ -1,0 +1,5 @@
+version: 0.0.1
+folder_path: plugins/coursepilot_webui_plugin
+type: plugin
+requirements: []
+repo_url: https://github.com/HKBU-CoursePilot/coursepilot_webui_plugin.git

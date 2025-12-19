@@ -11,7 +11,7 @@ import os
 import sys
 import json
 import asyncio
-from datetime import datetime
+from datetime import datetime, timezone
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.getcwd()
@@ -71,7 +71,7 @@ class WSMessage:
     def to_json(self) -> str:
         """Serialize to JSON string."""
         data = asdict(self)
-        data["timestamp"] = datetime.utcnow().isoformat()
+        data["timestamp"] = datetime.now(timezone.utc).isoformat()
         return json.dumps(data)
 
 

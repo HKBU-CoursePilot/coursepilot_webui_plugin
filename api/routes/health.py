@@ -12,7 +12,7 @@ project_root = os.getcwd()
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
-from datetime import datetime
+from datetime import datetime, timezone
 
 from fastapi import APIRouter
 
@@ -29,7 +29,7 @@ async def health_check():
     """
     return {
         "status": "healthy",
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "service": "coursepilot-api",
         "version": "0.1.0",
     }
@@ -71,5 +71,5 @@ async def readiness_check():
     return {
         "status": "ready" if all_ready else "degraded",
         "checks": checks,
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
     }

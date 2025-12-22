@@ -52,9 +52,9 @@ def start_api(host: str | None = None, port: int | None = None) -> None:
     cm = ConfigManager()
     config = cm.config.coursepilot_webui_plugin
 
-    api_config = config.dict_get("api", {})
-    final_host = host or api_config.get("host", "127.0.0.1")
-    final_port = port or api_config.get("port", 8000)
+    api_config = config.api
+    final_host = host or api_config.host
+    final_port = port or api_config.port
 
     logger.info(f"Starting CoursePilot API at http://{final_host}:{final_port}")
 
